@@ -20,3 +20,7 @@ class Evento(models.Model):
     #alterando formato da data e hora
     def get_data_evento(self):
         return self.data_evento.strftime('%d/%m/%Y %H:%M')    
+
+    #alteração do formato da hora apra editar um agendamento
+    def get_data_input_evento(self):
+        return self.data_evento.strftime('%Y-%m-%dT%H:%M')    
